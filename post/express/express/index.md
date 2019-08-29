@@ -1,7 +1,7 @@
 ---
 title: Express, a popular Node.js Framework
 seotitle: Introduction to Express, a practical tutorial
-description: "Express is a Node.js Web Framework. Node.js is an amazing tool for building networking services and applications. Express builds on top of its features to provide easy to use functionality that satisfy the needs of the Web Server use case."
+description: "Express is a Node.js Web Framework. Node.js is an amazing tool for building networking services and applications. Express builds on top of its features to provide easy to use functionality that satisfy the needs of the Web Server use-case."
 date: 2018-05-27T07:00:00+02:00
 updated: 2019-04-26T07:00:00+02:00
 booktitle: "Express"
@@ -42,9 +42,7 @@ Express is a [Node.js](/nodejs/) Web Framework.
 
 Node.js is an amazing tool for building networking services and applications.
 
-Express builds on top of its features to provide easy to use functionality that satisfy the needs of the Web Server use case.
-
-It's Open Source, free, easy to extend, very performant, and has lots and lots of pre-built packages you can just drop in and use, to perform all kind of things.
+Express builds on top of its features to provide easy to use functionality that satisfies the needs of the Web Server use-case. It's Open Source, free, easy to extend and very performant. There are also lots and lots of pre-built packages you can just drop in and use to perform all kinds of things.
 
 ## Installation
 
@@ -60,7 +58,7 @@ or [Yarn](/yarn/):
 yarn add express
 ```
 
-Both commands will also work in an empty directory, to start up your project from scratch, although `npm` does not create a `package.json` file at all, and Yarn creates a basic one.
+Both commands will also work in an empty directory, when starting your project from scratch (although `npm` does not create a `package.json` file at all, and Yarn creates a basic one).
 
 Just run `npm init` or `yarn init` if you're starting a new project from scratch.
 
@@ -106,7 +104,7 @@ app.delete('/', (req, res) => { /* */ })
 app.patch('/', (req, res) => { /* */ })
 ```
 
-Those methods accept a callback function, which is called when a request is started, and we need to handle it.
+Those methods accept a callback function - which is called when a request is started - and we need to handle it.
 
 We pass in an arrow function:
 
@@ -114,9 +112,9 @@ We pass in an arrow function:
 (req, res) => res.send('Hello World!')
 ```
 
-Express sends us two objects in this callback, which we called `req` and `res`, that represent the Request and the Response objects.
+Express sends us two objects in this callback, which we called `req` and `res`, they represent the Request and the Response objects.
 
-Request is the HTTP request. It can give us all the info about that, including the request parameters, the headers, the body of the request, and more.
+Request is the HTTP request. It gives us all the request information, including the request parameters, the headers, the body of the request, and more.
 
 Response is the HTTP response object that we'll send to the client.
 
@@ -159,7 +157,7 @@ In the Hello World example we used the `Response.send()` method to send a simple
 
 If you pass in a string, it sets the `Content-Type` header to `text/html`.
 
-if you pass in an object or an array, it sets the `application/json` `Content-Type` header, and parses that parameter into [JSON](/json/).
+If you pass in an object or an array, it sets the `application/json` `Content-Type` header, and parses that parameter into [JSON](/json/).
 
 `send()` automatically sets the `Content-Length` HTTP response header.
 
@@ -175,7 +173,7 @@ res.json({ username: 'Flavio' })
 
 ### Use end() to send an empty response
 
-An alternative way to send the response, without any body, it's by using the `Response.end()` method:
+An alternative way to send the response, without any body, is by using the `Response.end()` method:
 
 ```js
 res.end()
@@ -239,7 +237,7 @@ Value | Description
 `signed` | 	set the cookie to be signed
 `sameSite` | Value of [`SameSite`](/cookies/#samesite)
 
-A cookie can be cleared with
+A cookie can be cleared with:
 
 ```js
 res.clearCookie('username')
@@ -306,7 +304,7 @@ res.redirect('back')
 
 ### Send a file to be downloaded
 
-The `Response.download()` method allows you to send a file attached to the request, and the browser instead of showing it in the page, it will save it to disk.
+The `Response.download()` method allows you to send a file attached to the request. Instead of showing the page, the browser will save the file to disk.
 
 ```js
 res.download('/file.pdf')
@@ -326,7 +324,7 @@ res.jsonp({ username: 'Flavio' })
 
 ## Routing
 
-In the Hello World example we used this code
+In the Hello World example we used this code:
 
 ```js
 app.get('/', (req, res) => { /* */ })
@@ -336,7 +334,7 @@ This creates a route that maps accessing the root domain URL `/` to the response
 
 ### Named parameters
 
-What if we want to listen for custom requests, maybe we want to create a service that accepts a string, and returns that uppercase, and we don't want the parameter to be sent as a query string, but part of the URL. We use named parameters:
+What if we want to listen for custom requests? Maybe we want to create a service that accepts a string, and returns that string in uppercase. If we don't want the parameter to be sent as a query string, but part of the URL, we use named parameters:
 
 ```js
 app.get('/uppercase/:theValue', (req, res) => res.send(req.params.theValue.toUpperCase()))
@@ -358,7 +356,7 @@ will match `/post`, `/post/first`, `/thepost`, `/posting/something`, and so on.
 
 ## Middleware
 
-A middleware is a function that hooks into the routing process, and performs some operation at some point, depending on what it want to do.
+A middleware is a function that hooks into the routing process and performs an operation at some point, depending on what we want it to do.
 
 It's commonly used to edit the request or response objects, or terminate the request before it reaches the route handler code.
 
@@ -387,7 +385,7 @@ app.use(cookieParser())
 app.listen(3000, () => console.log('Server ready'))
 ```
 
-You can also set a middleware function to run for specific routes only, not for all, by using it as the second parameter of the route definition:
+You can also set a middleware function to run for specific routes only, by using it as the second parameter of the route definition:
 
 ```js
 const myMiddleware = (req, res, next) => {
@@ -427,7 +425,7 @@ Express is capable of handling server-side templates.
 
 Jade is the default template engine, but you can use many different template ones, including Pug, Mustache, EJS and more.
 
-Say I don't like Jade (I don't), and I want to use Handlebars.
+Say I don't like Jade (I don't), and I want to use Handlebars instead.
 
 I can install it using `npm install hbs`.
 
@@ -489,8 +487,8 @@ module.exports = HelloMessage
 
 ## What's next?
 
-Express has all the power of Node.js under the hoods.
+Express has all the power of Node.js under the hood.
 
-You can do anything that you want now, including connecting to a database, using any kind of caching, Redis, using sockets and everything you can imagine doing on a server.
+You can do anything that you want, including connecting to a database, using any kind of caching, Redis, using sockets, and everything you can imagine doing on a server.
 
 The sky is the limit.
