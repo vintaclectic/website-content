@@ -145,7 +145,7 @@ link.addEventListener('mousedown', event => {
 
 Bubbling and capturing are the 2 models that events use to propagate.
 
-Suppose you DOM structure is
+Suppose your DOM structure is
 
 ```html
 <div id="container">
