@@ -129,7 +129,7 @@ The `header` tag represents a part of the page that is the introduction. It can 
 	  <h1>Article title</h1>
   </header>
   ...
-</div>
+</article>
 ```
 
 ### `main`
@@ -155,6 +155,6 @@ The `footer` tag is used to determine the footer of an article, or the footer of
 	<footer>
     <p>Footer notes..</p>
   </footer>
-</div>
+</article>
 ```
 
