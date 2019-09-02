@@ -8,17 +8,17 @@ tags_weight: 5
 path: express-cors
 ---
 
-A JavaScript application running in the browser can usually only access HTTP resources on the same domain (origin) that serves it.
+A JavaScript application running in the browser can usually only access HTTP resources from the same domain (origin) that serves them.
 
-Loading images or scripts/styles always works, but XHR and Fetch calls to another server will fail, unless that server implements a way to allow that connection.
+Loading images or scripts/styles from the same origin always works. Also, loading Web Fonts using `@font-face` have the 'same-origin' policy set by default. Likewise with other, less popular things (like WebGL textures and `drawImage` resources loaded in the Canvas API).
 
-This way is called [CORS](/cors/), **Cross-Origin Resource Sharing**.
+However, XHR and Fetch calls to an external, 3rd party server will fail. That is unless the 3rd party server implements a mechanism which allows the connection to be made and requested resources to be downloaded and used.
 
-Also loading Web Fonts using `@font-face` has same-origin policy by default, and other less popular things (like WebGL textures and `drawImage` resources loaded in the Canvas API).
+This mechanism is called [CORS](/cors/), **Cross-Origin Resource Sharing**.
 
 One very important thing that needs CORS is [**ES Modules**](/es-modules/), recently introduced in modern browsers.
 
-If you don't set up a CORS policy **on the server** that allows to serve 3rd party origins, the request will fail.
+If you don't set up a CORS policy **on the server** that allows it to serve 3rd party origins, the request will fail.
 
 Fetch example:
 
@@ -35,9 +35,9 @@ A Cross-Origin resource fails if it's:
 - to a different **port**
 - to a different **protocol**
 
-and it's there for your security, to prevent malicious users to exploit the Web Platform.
+CORS is there for your security, to prevent malicious users from exploiting whatever Web Platform you happen to be using.
 
-But if you control both the server and the client, you have all the good reasons to allow them to talk to each other.
+If you control both the server **and** the client, you know that both parties are trustworthy, and therefore have good reason to allow resource sharing.
 
 How?
 
@@ -70,7 +70,7 @@ const server = app.listen(3000, () => {
 
 If you hit `/without-cors` with a fetch request from a different origin, it's going to raise the CORS issue.
 
-All you need to do to make things work out is to require the `cors` package linked above, and pass it in as a middleware function to an endpoint request handler:
+All you need to do to make things work smoothly, is to require the `cors` package linked above, and pass it in as a middleware function to an endpoint request handler:
 
 ```js
 const express = require('express')
@@ -88,7 +88,7 @@ I made a simple Glitch example. [Here is the client](https://flavio-cors-client.
 
 This is the Node.js Express server: <https://glitch.com/edit/#!/flaviocopes-cors-example-express>
 
-Note how the request that fails because it does not handle the CORS headings correctly is still received, as you can see in the Network panel, where you find the message the server sent:
+Note how the request that fails because the server does not handle the CORS headers correctly, is still received. As you can see in the Network panel, where you can see a message the server sent:
 
 ![No response from CORS](no-cors-response.png)
 
@@ -154,7 +154,7 @@ Access-Control-Request-Headers: origin, x-requested-with, accept
 Origin: https://your-origin.com
 ```
 
-The server will respond with something like this(irrelevant fields omitted):
+The server will respond with something like this (irrelevant fields omitted):
 
 ```
 HTTP/1.1 200 OK
