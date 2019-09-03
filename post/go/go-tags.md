@@ -131,6 +131,6 @@ func main() {
 
 [play](https://play.golang.org/p/LQMI_14SHr)
 
-will print "something", thanks to adhering to the `key:"value"` format for our tag.
+will print `age`, thanks to adhering to the `key:"value"` format for our tag.
 
 
