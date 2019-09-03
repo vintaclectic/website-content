@@ -1,7 +1,7 @@
 ---
 title: Retrieve the GET query string parameters using Express
 seotitle: How to retrieve the GET query string parameters using Express
-description: "The query string is the part that comes after the URL path, and starts with a question mark. Let's see how to get the properties values."
+description: "The query string is the part that comes after the URL path and starts with a question mark ('?'). Let's see how to get the properties and their values."
 date: 2018-08-06T15:00:00+02:00
 tags: express
 tags_weight: 17
@@ -10,7 +10,7 @@ path: express-get-query-variables
 
 The query string is the part that comes after the URL path, and starts with a question mark `?`.
 
-Example:
+For example:
 
 ```txt
 ?name=flavio
