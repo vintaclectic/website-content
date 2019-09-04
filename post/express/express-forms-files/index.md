@@ -16,9 +16,9 @@ This is an example of an HTML form that allows a user to upload a file:
 </form>
 ```
 
-When the user press the submit button, the browser will automatically make a `POST` request to the `/submit-form` URL on the same origin of the page, sending the data it contains, not encoded as `application/x-www-form-urlencoded` as a normal form, but as `multipart/form-data`.
+When the user presses the submit button, the browser will automatically make a `POST` request to the `/submit-form` URL on the same origin of the page. The browser sends the data contained, not encoded as as a normal form `application/x-www-form-urlencoded` , but as `multipart/form-data`.
 
-Server-side, handling multipart data can be tricky and error prone, so we are going to use a utility library called **formidable**. [Here's the GitHub repo](https://github.com/felixge/node-formidable), it has over 4000 stars and well maintained.
+Server-side, handling multipart data can be tricky and error prone, so we are going to use a utility library called **formidable**. [Here's the GitHub repo](https://github.com/felixge/node-formidable), it has over 4000 stars and is well-maintained.
 
 You can install it using:
 
@@ -26,7 +26,7 @@ You can install it using:
 npm install formidable
 ```
 
-Then in your Node.js file, include it:
+Then include it in your Node.js file:
 
 ```js
 const express = require('express')
@@ -34,7 +34,7 @@ const app = express()
 const formidable = require('formidable')
 ```
 
-Now in the `POST` endpoint on the `/submit-form` route, we instantiate a new Formidable form using `formidable.IncomingForm()`:
+Now, in the `POST` endpoint on the `/submit-form` route, we instantiate a new Formidable form using `formidable.IncomingForm()`:
 
 ```js
 app.post('/submit-form', (req, res) => {
@@ -42,7 +42,7 @@ app.post('/submit-form', (req, res) => {
 })
 ```
 
-After doing so, we need to parse the form. We can do so synchronously by providing a callback, which means all files are processed, and once formidable is done, it makes them available:
+After doing so, we need to be able to parse the form. We can do so synchronously by providing a callback, which means all files are processed, and once formidable is done, it makes them available:
 
 ```js
 app.post('/submit-form', (req, res) => {
@@ -60,7 +60,7 @@ app.post('/submit-form', (req, res) => {
 })
 ```
 
-Or you can use events instead of a callback, to be notified when each file is parsed, and other events, like ending processing, receiving a non-file field, or an error occurred:
+Or, you can use events instead of a callback. For example, to be notified when each file is parsed, or other events such as completion of file processing, receiving a non-file field, or if an error occurred:
 
 ```js
 app.post('/submit-form', (req, res) => {
@@ -84,14 +84,14 @@ app.post('/submit-form', (req, res) => {
 })
 ```
 
-Whatever way you choose, you'll get one or more Formidable.File objects, which give you information about the file uploaded. These are some of the methods you can call:
+Whichever way you choose, you'll get one or more Formidable.File objects, which give you information about the file uploaded. These are some of the methods you can call:
 
 - `file.size`, the file size in bytes
-- `file.path`, the path this file is written to
+- `file.path`, the path the file is written to
 - `file.name`, the name of the file
 - `file.type`, the MIME type of the file
 
-The path defaults to the temporary folder and can be modified if you listen to the `fileBegin` event:
+The path defaults to the temporary folder and can be modified if you listen for the `fileBegin` event:
 
 ```js
 app.post('/submit-form', (req, res) => {

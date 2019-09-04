@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 })
 ```
 
-Use the `Request.header()` method to access one individual request header value:
+Use the `Request.header()` method to access one individual request header's value:
 
 ```js
 app.get('/', (req, res) => {
@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 })
 ```
 
-## Change any HTTP header value of a response
+## Change any HTTP header value for a response
 
 You can change any HTTP header value using `Response.set()`:
 
