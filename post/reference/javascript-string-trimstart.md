@@ -11,5 +11,5 @@ Return a new string with removed white space from the start of the original stri
 'Testing'.trimStart() //'Testing'
 ' Testing'.trimStart() //'Testing'
 ' Testing '.trimStart() //'Testing '
-'Testing'.trimStart() //'Testing'
+'Testing '.trimStart() //'Testing'
 ```

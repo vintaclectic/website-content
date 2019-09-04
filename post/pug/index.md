@@ -2,6 +2,7 @@
 title: The Pug Guide
 description: "How to use the Pug templating engine"
 date: 2018-09-09T07:00:00+02:00
+updated: 2019-08-27T07:00:00+02:00
 booktitle: "Pug"
 tags: node
 tags_weight: 50

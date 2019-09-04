@@ -2,7 +2,7 @@
 title: Validating input in Express using express-validator
 description: "Learn how to validate any data coming in as input in your Express endpoints"
 date: 2018-08-29T07:00:00+02:00
-updated: 2019-07-20T07:00:00+02:00
+updated: 2019-08-22T07:00:00+02:00
 tags: express
 tags_weight: 70
 path: express-validate-input
@@ -23,13 +23,13 @@ app.post('/form', (req, res) => {
 })
 ```
 
-How do you server-side validate those results to make sure
+How do you perform server-side validation on those results to make sure:
 
 - name is a string of at least 3 characters?
 - email is a real email?
 - age is a number, between 0 and 110?
 
-The best way to handle validating any kind of input coming from outside in Express is by using the [`express-validator` package](https://express-validator.github.io):
+The best way to handle validation on any kind of input coming from outside in Express is by using the [`express-validator` package](https://express-validator.github.io):
 
 ```bash
 npm install express-validator

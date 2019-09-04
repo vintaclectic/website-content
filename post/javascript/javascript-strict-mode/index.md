@@ -1,5 +1,6 @@
 ---
 title: "JavaScript Strict Mode"
+seotitle: "What is `use strict` in JavaScript?"
 description: "Strict Mode is an ES5 feature, and it's a way to make JavaScript behave in a better way. And in a different way, as enabling Strict Mode changes the semantics of the JavaScript language. It's really important to know the main differences between JavaScript code in strict mode, and normal JavaScript, which is often referred as sloppy mode"
 date: 2018-05-19T07:06:29+02:00
 booktitle: "Strict Mode"

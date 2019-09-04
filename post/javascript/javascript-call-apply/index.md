@@ -1,5 +1,6 @@
 ---
 title: call() and apply() in JavaScript
+seotitle: What is the difference between call() and apply() in JavaScript?
 date: 2018-12-10T07:00:00+02:00
 description: "Find out how to use call() and apply() and their difference in JavaScript"
 tags: js

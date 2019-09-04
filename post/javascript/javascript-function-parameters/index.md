@@ -1,6 +1,7 @@
 ---
 title: JavaScript Function Parameters
 date: 2019-06-06T07:00:00+02:00
+updated: 2019-08-27T07:00:00+02:00
 description: "Learn the basics of JavaScript Function Parameters"
 tags: js
 ---
@@ -45,7 +46,9 @@ const dosomething = (foo = 1, bar = 'hey',) => {
 
 dosomething(2, 'ho!')
 ```
+
 It is also okay to *call* your functions with a trailing comma after the last parameter:
+
 ```js
 dosomething(2, 'ho!',)
 ```

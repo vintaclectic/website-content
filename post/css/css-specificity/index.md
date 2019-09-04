@@ -50,7 +50,7 @@ Like it works for numbers in the decimal system: `1 0 0 0` is higher than `0 1 0
 
 The first slot, the rightmost one, is the least important.
 
-We increase this value when we have an **element selector**. An element is a tag name. If you have more than one element selector in the rule, you increment accordingly the value stored in this slot.
+We increase this value when we have a **type selector**. A type is a tag name. If you have more than one type selector in the rule, you increment accordingly the value stored in this slot.
 
 Examples:
 

@@ -1,5 +1,6 @@
 ---
 title: JavaScript Closures explained
+seotitle: How do JavaScript closures work?
 description: "A gentle introduction to the topic of closures, key to understanding how JavaScript functions work"
 date: 2018-04-23T07:04:59+02:00
 booktitle: "Closures"

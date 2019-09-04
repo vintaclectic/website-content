@@ -32,7 +32,10 @@ const url = 'mongodb://localhost:27017'
 Then use the `mongo.connect()` method to get the reference to the MongoDB instance client:
 
 ```js
-mongo.connect(url, (err, client) => {
+mongo.connect(url, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  }, (err, client) => {
   if (err) {
     console.error(err)
     return

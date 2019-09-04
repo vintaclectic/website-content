@@ -3,7 +3,7 @@ title: Express, a popular Node.js Framework
 seotitle: Introduction to Express, a practical tutorial
 description: "Express is a Node.js Web Framework. Node.js is an amazing tool for building networking services and applications. Express builds on top of its features to provide easy to use functionality that satisfy the needs of the Web Server use-case."
 date: 2018-05-27T07:00:00+02:00
-updated: 2019-04-26T07:00:00+02:00
+updated: 2019-08-29T07:00:00+02:00
 booktitle: "Express"
 tags: express
 tags_weight: 5

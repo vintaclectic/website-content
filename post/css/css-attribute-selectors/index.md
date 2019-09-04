@@ -7,7 +7,7 @@ tags: css
 
 In this post I'll introduce attribute selectors.
 
-> Also see [an introduction to the basic CSS Selectors](/css-selectors/). In there I introduce several of the basic CSS selectors: using element selectors, class, id, how to combine them, how to target multiple classes, how to style several selectors in the same rule, how to follow the page hierarchy with child and direct child selectors, and adjacent siblings.
+> Also see [an introduction to the basic CSS Selectors](/css-selectors/). In there I introduce several of the basic CSS selectors: using type selectors, class, id, how to combine them, how to target multiple classes, how to style several selectors in the same rule, how to follow the page hierarchy with child and direct child selectors, and adjacent siblings.
 
 ## Attribute presence selectors
 

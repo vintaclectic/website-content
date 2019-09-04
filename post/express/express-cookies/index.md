@@ -2,6 +2,7 @@
 title: Manage Cookies with Express
 description: "How to use the `Response.cookie()` method to manipulate your cookies"
 date: 2018-09-23T07:00:00+02:00
+updated: 2019-09-02T07:00:00+02:00
 booktitle: "Express"
 tags: express
 tags_weight: 5

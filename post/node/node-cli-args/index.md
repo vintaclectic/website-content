@@ -73,7 +73,9 @@ node app.js name=flavio
 ```
 
 `args[0]` is `name=flavio`, and you need to
-parse it. The best way to do so is by using the [`minimist`](https://www.npmjs.com/package/minimist) library, which helps dealing with arguments:
+parse it.
+
+The best way to do so is by using the [`minimist`](https://www.npmjs.com/package/minimist) library, which helps dealing with arguments:
 
 ```js
 const args = require('minimist')(process.argv.slice(2))
@@ -83,5 +85,5 @@ args['name'] //flavio
 This time you need to use double dashes before each argument name:
 
 ```bash
-node app.js --name=flavio
+
 ```

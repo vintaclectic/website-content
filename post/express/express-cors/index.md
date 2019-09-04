@@ -2,6 +2,7 @@
 title: Handling CORS in Express
 description: "How to allow cross site requests by setting up CORS"
 date: 2018-09-22T07:00:00+02:00
+updated: 2019-09-02T07:00:00+02:00
 booktitle: "Express"
 tags: express
 tags_weight: 5

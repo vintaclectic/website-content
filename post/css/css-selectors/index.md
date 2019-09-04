@@ -234,7 +234,7 @@ This will assign the color yellow to all span elements preceded by a `p` element
 We have a lot more selectors we can use:
 
 - attribute selectors
-- pseudo class selectors
-- pseudo element selectors
+- pseudo-class selectors
+- pseudo-element selectors
 
 More on those on future posts.
