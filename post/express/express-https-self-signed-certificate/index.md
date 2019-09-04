@@ -10,13 +10,13 @@ path: express-https-self-signed-certificate
 
 To be able to serve a site on HTTPS from localhost you need to create a self-signed certificate.
 
-A self-signed certificate will be enough to establish a secure HTTPS connection, although browsers will complain that the certificate is self-signed and as such it's not trusted. It's great for development purposes.
+A self-signed certificate is sufficent to establish a secure, HTTPS connection for development purposes. Although browsers will complain that the certificate is self-signed (and as such is not trusted).
 
 To create the certificate you must have **OpenSSL** installed on your system.
 
-You might have it installed already, just test by typing `openssl` in your terminal.
+You may have it installed already, just try typing `openssl` in your terminal.
 
-If not, on a Mac you can install it using `brew install openssl` if you use [Homebrew](https://brew.sh). Otherwise search on Google "how to install openssl on <your-operating-system>".
+If not, on a Mac you can install it using `brew install openssl` (if you use [Homebrew](https://brew.sh)). Otherwise, search on Google "how to install openssl on <your-operating-system>".
 
 Once OpenSSL is installed, run this command:
 
@@ -24,7 +24,7 @@ Once OpenSSL is installed, run this command:
 openssl req -nodes -new -x509 -keyout server.key -out server.cert
 ```
 
-It will as you a few questions. The first is the country name:
+You will be prompted to answer a few questions. The first is the country name:
 
 ```txt
 Generating a 1024 bit RSA private key
@@ -47,13 +47,13 @@ Then your state or province:
 State or Province Name (full name) [Some-State]:
 ```
 
-your city:
+Your city:
 
 ```txt
 Locality Name (eg, city) []:
 ```
 
-and your organization name:
+...and your organization name:
 
 ```txt
 Organization Name (eg, company) [Internet Widgits Pty Ltd]:
@@ -68,20 +68,20 @@ Just remember to set this to `localhost`:
 Common Name (e.g. server FQDN or YOUR name) []: localhost
 ```
 
-and to add your email address:
+...and to add your email address:
 
 ```txt
 Email Address []:
 ```
 
-That's it! Now you have 2 files in the folder where you ran this command:
+That's it! Now you have 2 files in the folder where you ran the original command:
 
 - `server.cert` is the self-signed certificate file
 - `server.key` is the private key of the certificate
 
-Both files will be needed to establish the HTTPS connection, and depending on how you are going to setup your server, the process to use them will be different.
+Both files will be needed to establish the HTTPS connection, and depending on how you are going to setup your server, the process to use them will vary.
 
-Those files need to be put in a place reachable by the application, then you need to configure the server to use them.
+Those files need to be put in a place reachable by the application, and then you'll need to configure the server to use them.
 
 This is an example using the `https` core module and Express:
 
@@ -98,7 +98,7 @@ https.createServer({}, app).listen(3000, () => {
 })
 ```
 
-without adding the certificate, if I connect to `https://localhost:3000` this is what the browser will show:
+Without adding the certificate, if I connect to `https://localhost:3000` this is what the browser will show:
 
 ![without-cert](without-cert.png)
 
@@ -117,6 +117,6 @@ https.createServer({
 })
 ```
 
-Chrome will tell us the certificate is invalid, since it's self-signed, and will ask us to confirm to continue, but the HTTPS connection will work:
+Chrome will tell us that the certificate is invalid (since it's self-signed), and will ask us to confirm before continuing (however, the HTTPS connection will still work):
 
 ![with-cert](with-cert.png)
