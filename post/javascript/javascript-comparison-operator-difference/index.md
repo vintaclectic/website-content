@@ -25,7 +25,9 @@ This is why you get results like
 
 ```js
 false == '0'  //true
+false === '0' //false
 null == undefined //true
+null === undefined  //false
 ```
 
 In my experience, in 97% of the cases you'll want to use `===`, unless `==` provides exactly what you want. It has less drawbacks and edge cases.
