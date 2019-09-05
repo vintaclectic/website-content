@@ -1,6 +1,6 @@
 ---
 title: JavaScript Arrays, a definitive cheat sheet
-description: "JavaScript arrays over time got more and more features, sometimes it's tricky to know when to use some construct vs another. This post aims to explain what you should use, as of 2019"
+description: "JavaScript arrays over time got more and more features, sometimes it's tricky to know when to use some construct vs another. This post aims to explain what you should use"
 date: 2017-08-24T11:04:59+02:00
 updated: 2019-01-17T11:04:59+02:00
 booktitle: "Arrays"
@@ -44,7 +44,7 @@ tags_weight: 15
 
 <!-- /TOC -->
 
-[JavaScript](/javascript/) arrays over time got more and more features, sometimes it's tricky to know when to use some construct vs another. This post aims to explain what you should use in 2018.
+[JavaScript](/javascript/) arrays over time got more and more features, sometimes it's tricky to know when to use some construct vs another. This post aims to explain what you should use in modern JavaScript.
 
 ## Initialize array
 

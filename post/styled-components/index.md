@@ -1,6 +1,7 @@
 ---
 title: Styled Components
 date: 2018-02-08T10:04:59+02:00
+updated: 2019-09-05T10:04:59+02:00
 description: "Styled Components are one of the new ways to use CSS in modern JavaScript. It is the meant to be a successor of CSS Modules, a way to write CSS that's scoped to a single component, and not leak to any other element in the page"
 tags: react
 ---
@@ -84,7 +85,7 @@ Now this component can be rendered in our container using the normal React synta
 render(<Button />)
 ```
 
-Styled Components offer other functions you can use to create other components, not just `button`, like `section`, `h1`, `input` and many others.
+Styled Components offer other functions you can use to create other components, not only `button`, like `section`, `h1`, `input` and many others.
 
 The syntax used, with the backtick, might be weird at first, but it's called [Tagged Templates](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals), it's plain JavaScript and it's a way to pass an argument to the function.
 
@@ -106,9 +107,9 @@ render(
 )
 ```
 
-This will do just what you think, inserting those props as HTML attributes.
+This will do what you think, inserting those props as HTML attributes.
 
-Props instead of just being blindly passed down to the [DOM](https://flaviocopes.com/dom/) can also be used to customize a component based on the prop value. Here's an example:
+Props instead of being blindly passed down to the [DOM](https://flaviocopes.com/dom/) can also be used to customize a component based on the prop value. Here's an example:
 
 ```js
 const Button = styled.button`
@@ -129,7 +130,7 @@ Setting the `primary` prop changes the color of the button.
 
 ## Extending an existing Styled Component
 
-If you have one component and you want to create a similar one, just styled slightly differently, you can use `extend`:
+If you have one component and you want to create a similar one, styled slightly differently, you can use `extend`:
 
 ```js
 const Button = styled.button`
@@ -151,9 +152,20 @@ render(
 
 ## It's Regular CSS
 
-In Styled Components, you can use the CSS you already know and love. It's just plain CSS. It is not pseudo CSS nor inline CSS with its limitations.
+In Styled Components, you can use the CSS you already know and love. It's plain CSS. It is not pseudo CSS nor inline CSS with its limitations.
 
 You can use media queries, [nesting](https://tabatkins.github.io/specs/css-nesting/) and anything else you might need.
+
+Here's an example of a media query:
+
+```js
+const Button = styled.button`
+  color: green;
+  @media screen and (max-width: 800px) {
+    color: black;
+  }
+`
+```
 
 ## Using Vendor Prefixes
 

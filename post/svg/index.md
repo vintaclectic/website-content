@@ -676,7 +676,7 @@ This second form is XHTML. It can also be used with HTML5 (documents with [`<!DO
 
 ## Should I worry about browser support?
 
-In 2018 SVG is supported by the vast majority of user's browsers.
+Today SVG is supported by the vast majority of user's browsers.
 
 You can still check for missing support using libraries like [Modernizr](https://modernizr.com/), and provide a fallback:
 

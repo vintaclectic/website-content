@@ -7,7 +7,7 @@ tags: js
 
 ES6, introduced in 2015, added the `startsWith()` method to the String object prototype.
 
-This is _the_ way to perform this check in 2018.
+This is _the_ way to perform this check in modern JavaScript
 
 This means you can call `startsWith()` on any string, provide a substring, and check if the result returns `true` or `false`:
 

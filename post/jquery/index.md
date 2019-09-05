@@ -185,9 +185,9 @@ jQuery animations can now be done in the browser using CSS Transitions or CSS An
 
 Transpile your code using Babel, or use specific polyfills ([polyfill.io](https://polyfill.io))
 
-## Should you use jQuery in 2018?
+## Should you use jQuery today?
 
-Let's answer the question that this article poses in its title. If you don't already know jQuery, is it worth learning in 2018?
+Let's answer the question that this article poses in its title. If you don't already know jQuery, is it worth learning it now?
 
 In my opinion jQuery should not be used any more in new projects that only target modern browsers, and of course if your project relies on it for some particular reason, or just because you use plugins or other code that needs jQuery, definitely keep using it.
 

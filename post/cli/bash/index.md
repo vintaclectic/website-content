@@ -5,7 +5,7 @@ description: "A user introduction to the Bash shell"
 tags: cli
 ---
 
-Bash is (as of 2019) _the_ de facto shell on most systems you'll get in touch with: Linux, macOS, and the WSL on Windows 10.
+Bash is (as of today) _the_ de facto shell on most systems you'll get in touch with: Linux, macOS, and the WSL on Windows 10.
 
 There are historical reasons that made Bash the most popular shell in the world. Back in 1989, when its was first released, the tech world was very different. At that time, most software in the UNIX world was closed source. Unix itself was proprietary and closed source.
 
@@ -64,7 +64,7 @@ Depending on your Bash configuration, you will see your current folder shown bef
 
 When you are writing your commands in the shell, notice that you can move left and right with the arrow keys. This is a shell feature. You can move around your commands, press the backspace button and correct commands. Pressing the `enter` key tells the shell to go and let the system execute the command.
 
-This is normal and accepted behavior as of 2019, but something that probably made "wow" the early UNIX users.
+This is normal and accepted behavior, but something that probably made "wow" the early UNIX users.
 
 Keyboard combinations allow you to be quick at editing without reaching for the arrow keys:
 

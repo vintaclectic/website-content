@@ -1,5 +1,6 @@
 ---
 title: "JavaScript Loops"
+seotitle: "How to loop through an array in JavaScript"
 description: "JavaScript provides many way to iterate through loops. This tutorial explains all the various loop possibilities in modern JavaScript"
 date: 2018-04-11T07:06:29+02:00
 booktitle: "Loops"

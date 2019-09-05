@@ -445,7 +445,7 @@ We can associate a favicon using:
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
 ```
 
-This tag _was_ also used for multi-page content, to indicate the previous and next page using `rel="prev"` and `rel="next"`. Mostly for Google. As of 2019, [Google announced it does not use this tag any more](https://twitter.com/googlewmc/status/1108726443251519489) because it can find the correct page structure without it.
+This tag _was_ also used for multi-page content, to indicate the previous and next page using `rel="prev"` and `rel="next"`. Mostly for Google. In 2019 [Google announced it does not use this tag any more](https://twitter.com/googlewmc/status/1108726443251519489) because it can find the correct page structure without it.
 
 ### The `style` tag
 
