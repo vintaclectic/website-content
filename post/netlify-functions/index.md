@@ -17,7 +17,7 @@ You can have JavaScript on your site (or plan HTML forms) invoke a URL endpoint,
 
 In this tutorial we focus on lambda functions written in Node.js.
 
-Netlify gives us have a generous free tier limit, with up to 125.000 function invocations and a total of 100 hours of run time every month. Functions have 128MB of memory and each can execute for up to 10 seconds. For normal needs, this is more than enough.
+Netlify have a generous free tier limit, with up to 125.000 function invocations and a total of 100 hours of run time every month. Functions have 128MB of memory and each can execute for up to 10 seconds. For normal needs, this is more than enough.
 
 Internally, Netlify runs this function on **AWS Lambda**, abstracting away all the complexity of AWS for you.
 
