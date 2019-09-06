@@ -1,6 +1,6 @@
 ---
 title: "What does the double negation operator !! do in JavaScript?"
-description: "You might find the `!!` operator in used the wild. What does it mean?"
+description: "You might find the `!!` operator used in the wild. What does it mean?"
 date: 2019-09-01T07:00:00+02:00
 tags: js
 ---
