@@ -15,6 +15,6 @@ The `!!` operator does that.
 
 And in reality it's two negation operators one after the other. There's no `!!` operator in JavaScript. But there's `!`.
 
-It first negates the result of the expression, then it negates it again. In this way if you had a non-zero number, a string, an object, an array, or anything that's trueish, you'll get `true` back.
+It first negates the result of the expression, then it negates it again. In this way if you had a non-zero number, a string, an object, an array, or anything that's truthy, you'll get `true` back.
 
 Otherwise you'll get `false`.
