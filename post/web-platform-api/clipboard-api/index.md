@@ -45,12 +45,14 @@ Say you have a `p` element in an HTML page:
 You create a click event listener on it, and you first check if the Clipboard API is available:
 
 ```js
+window.onload = function () {
 document.querySelector('p').addEventListener('click', async e => {
   if (!navigator.clipboard) {
     // Clipboard API not available
     return
   }
 })
+}
 ```
 
 Now, we want to copy the content of that `p` tag to the Clipboard. We do so by looking up the `innerText` of the element, identified by `event.target`:
